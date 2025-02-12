@@ -36,10 +36,10 @@ async def webGrabber():
                 await button.click()
                 download = await download_info.value  # Get the Download object
 
-                # 3. Get the suggested file name:
+                # Get the suggested file name:
                 suggested_filename = download.suggested_filename
 
-                # 4. Save the downloaded file:
+                # Save the downloaded file:
                 print(f"Downloading file: {suggested_filename}\n")
                 download_path = f"{downloadDirAbs}/{suggested_filename}" # Specify the directory
                 await download.save_as(download_path)
